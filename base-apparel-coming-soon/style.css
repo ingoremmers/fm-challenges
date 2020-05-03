@@ -23,7 +23,7 @@ main {
   width: 1440px;
   display: grid;
   background-color: white;
-  margin: 100px auto;
+  margin: auto;
   _background-image: url(design/desktop-design.jpg);
 }
 
@@ -115,7 +115,9 @@ button:hover {
   padding: 10px 32px;
 }
 
-
+label {
+  visibility: hidden;
+}
 
 
 @media (max-width: 1439px) {
