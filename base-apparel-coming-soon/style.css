@@ -93,6 +93,7 @@ button {
   border-radius: 10em;
   box-shadow: 5px 10px 15px hsla(0, 80%, 86%, 50%);
   cursor: pointer;
+  position: relative;
 }
 
 button:hover {
@@ -107,13 +108,15 @@ button:hover {
 }
 
 
-form:invalid::after {
+#email:focus:invalid + #error::after {
   content: "Please provide a valid email";
   color: hsl(0, 36%, 70%);
-  position: relative;
-  left: -70px;
-  top: -10px;
+  position: absolute;
+  padding: 10px 32px;
 }
+
+
+
 
 @media (max-width: 1439px) {
   main {
@@ -166,12 +169,11 @@ form:invalid::after {
   #email {
     height: 44px;
   }
-  #email:invalid {
-    background-position-x: 82%;
+  #email:focus:invalid {
+    background-position-x: 83%;
   }
   form:invalid::after {
     left: -10%;
     top: -3px;
   }
-  .test {}
 }
