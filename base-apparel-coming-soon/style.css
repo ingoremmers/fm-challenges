@@ -10,7 +10,6 @@
 
 * {
   box-sizing: border-box;
-
   padding: 0;
   margin: 0;
 }
@@ -23,8 +22,7 @@ main {
   width: 1440px;
   display: grid;
   background-color: white;
-  margin: auto;
-  _background-image: url(design/desktop-design.jpg);
+  margin: 0 auto;
 }
 
 #hero-desktop {
@@ -116,7 +114,7 @@ button:hover {
 }
 
 label {
-  visibility: hidden;
+  display: none;
 }
 
 
