@@ -173,4 +173,5 @@ form:invalid::after {
     left: -10%;
     top: -3px;
   }
+  .test {}
 }
