@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+* {
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  font-family: "Josefin Sans", sans-serif;
+}
+main {
+  width: 1440px;
+  display: grid;
+  background-color: white;
+  margin: 100px auto;
+  _background-image: url(design/desktop-design.jpg);
+}
+
+#hero-desktop {
+  grid-column: 2;
+}
+#hero-mobile {
+  display: none;
+}
+
+section {
+  grid-column: 1;
+  background-image: url("images/bg-pattern-desktop.svg");
+  padding-left: 165px;
+}
+
+#logo {
+  padding: 65px 0;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 64px;
+  color: hsl(0, 6%, 24%);
+  text-transform: uppercase;
+  letter-spacing: 17px;
+  line-height: 67px;
+  padding: 66px 165px 0px 0;
+}
+
+h1 span {
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+
+p {
+  padding: 23px 220px 9px 0;
+  font-size: 16px;
+  line-height: 28px;
+  color: hsl(0, 36%, 70%);
+}
+
+form {
+  padding: 30px 220px 9px 0;
+}
+
+#email {
+  display: block;
+  background-color: transparent;
+  border: 2px solid hsl(0, 36%, 70%);
+  border-radius: 10em;
+  font-size: 16px;
+  padding: 15px 32px;
+  height: 55px;
+  width: 100%;
+  color: hsl(0, 36%, 70%);
+}
+
+button {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border-style: none;
+  height: 55px;
+  width: 100px;
+  position: relative;
+  top: -55px;
+  right: -345px;
+  border-radius: 10em;
+  box-shadow: 5px 10px 15px hsla(0, 80%, 86%, 50%);
+  cursor: pointer;
+}
+
+button:hover {
+  background: hsl(0, 80%, 86%);
+}
+
+#email:focus:invalid {
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-position-x: 73%;
+  background-image: url(images/icon-error.svg);
+}
+
+
+form:invalid::after {
+  content: "Please provide a valid email";
+  color: hsl(0, 36%, 70%);
+  position: relative;
+  left: -70px;
+  top: -10px;
+}
+
+@media (max-width: 1439px) {
+  main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  section {
+    padding: 0;
+    background-image: none;
+  }
+  #logo {
+    padding: 32px;
+    width: 160px;
+  }
+  #hero-desktop {
+    display: none;
+  }
+  #hero-mobile {
+    display: block;
+    width: 100%;
+  }
+  section {
+    grid-row: 2;
+  }
+  h1 {
+    font-size: 40px;
+    padding: 70px 0 0 0;
+    letter-spacing: 10px;
+    line-height: 44px;
+    text-align: center;
+  }
+  p {
+    padding: 8px 30px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  form {
+    padding: 28px;
+  }
+
+  button {
+    right: -85%;
+    width: 15%;
+    height: 44px;
+    top: -44px;
+  }
+  #email {
+    height: 44px;
+  }
+  #email:invalid {
+    background-position-x: 82%;
+  }
+  form:invalid::after {
+    left: -10%;
+    top: -3px;
+  }
+}
