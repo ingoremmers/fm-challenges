@@ -21,7 +21,7 @@ body {
 main {
   width: 1440px;
   display: grid;
-  background-color: white;
+  background:linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
   margin: 0 auto;
 }
 
@@ -36,6 +36,7 @@ section {
   grid-column: 1;
   background-image: url("images/bg-pattern-desktop.svg");
   padding-left: 165px;
+ 
 }
 
 #logo {
