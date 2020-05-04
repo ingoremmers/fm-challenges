@@ -36,8 +36,8 @@ html {
   font-size: 14px;
   color: var(--text-color);
   background: linear-gradient(
-    var(--bg-pattern-color) 250px,
-    var(--bg-color) 250px,
+    var(--bg-pattern-color) 245px,
+    var(--bg-color) 245px,
     var(--bg-color) 1000px);
     height: 100%;
   
