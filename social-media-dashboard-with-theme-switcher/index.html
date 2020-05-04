@@ -1,87 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      clear: both;
+      margin: 20px;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+  <header>
+    <h1>Social Media Dashboard</h1>
+    <p>Total Followers: 23,004</p>
 
-  Dark Mode
-
-  
-
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
+    <span id="mode-switcher">Dark Mode
+      <label for="darkmode" class="darkmode-switch">
+        <input type="checkbox" name="darkmode" id="darkmode">
+        <span class="switch"></span>
+      </label>
+    </span>
 
 
+  </header>
+  <main>
+    <section class="follower">
+      <article class="fb">
+        <p class="name">
+          <img src="images/icon-facebook.svg" alt="" srcset="">
+          <a href="#">@nathanf</a>
+        </p>
 
-  Overview - Today
+        <p class="number">1987</p>
+        <p class="number-type">Followers</p>
+        <p class="number-today up">12 Today</p>
+      </article>
+      <article class="twitter">
+        <p class="name">
+          <img src="images/icon-twitter.svg" alt="" srcset="">
+          <a href="#">@nathanf</a>
+        </p>
 
-  Page Views
-  87
-  3%
+        <p class="number">1044</p>
+        <p class="number-type">Followers</p>
+        <p class="number-today up">99 Today</p>
+      </article>
+      <div class="ig">
+        <article>
+          <p class="name">
+            <img src="images/icon-instagram.svg" alt="" srcset="">
+            <a href="#">@realnathanf</a>
+          </p>
 
-  Likes
-  52
-  2%
+          <p class="number">11k</p>
+          <p class="number-type">Followers</p>
+          <p class="number-today up">1099 Today</p>
+        </article>
+      </div>
+      <article class="yt">
+        <p class="name">
+          <img src="images/icon-youtube.svg" alt="" srcset="">
+          <a href="#">Nathan F.</a>
+        </p>
 
-  Likes
-  5462
-  2257%
+        <p class="number">8239</p>
+        <p class="number-type">Subscribers</p>
+        <p class="number-today down">144 Today</p>
+      </article>
+    </section>
 
-  Profile Views
-  52k
-  1375%
 
-  Retweets
-  117
-  303%
+    <h2>Overview - Today</h2>
+    <section class="today">
+      <article class="description">
+        <span>Page Views </span>
+        <img src="images/icon-facebook.svg" alt="" srcset="">
+        <div></div>
+        <span class="number">87</span>
+        <span class="number-today up">3%</span>
+      </article>
+      <article class="description">
+        <span>Likes</span>
+        <img src="images/icon-facebook.svg" alt="" srcset="">
+        <div></div>
+        <span class="number">52</span>
+        <span class="number-today down">2%</span>
+      </article>
+      <article class="description">
+        <span>Likes</span>
+        <img src="images/icon-instagram.svg" alt="" srcset="">
+        <div></div>
+        <span class="number">5462</span>
+        <span class="number-today up">2257%</span>
+      </article>
+      <article class="description">
+        <span>Profile Views</span>
+        <img src="images/icon-instagram.svg" alt="" srcset="">
+        <div></div>
+        <span class="number">52k</span>
+        <span class="number-today up">1375%</span>
+      </article>
+      <article class="description">
+        <span>Retweets</span>
+        <img src="images/icon-twitter.svg" alt="" srcset="">
+        <div></div>
+        <span class="number">117</span>
+        <span class="number-today up">303%</span>
+      </article>
 
-  Likes
-  507
-  553%
+      <article class="description">
+        <span>Likes</span>
+        <img src="images/icon-twitter.svg" alt="" srcset="">
+        <div></div>
+        <span class="number">507</span>
+        <span class="number-today up">553%</span>
+      </article>
+      <article class="description">
+        <span>Likes</span>
+        <img src="images/icon-youtube.svg" alt="" srcset="">
+        <div></div>
+        <span class="number">107</span>
+        <span class="number-today down">19%</span>
+      </article>
+      <article class="description">
+        <span>Total Views</span>
+        <img src="images/icon-youtube.svg" alt="" srcset="">
+        <div></div>
+        <span class="number">1407</span>
+        <span class="number-today up">12%</span>
+      </article>
 
-  Likes
-  107
-  19%
+    </section>
 
-  Total Views
-  1407
-  12%
-  
+  </main>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Ingo</a>.
   </div>
+
+  <script>
+    let checkbox = document.getElementById('darkmode');
+
+    checkbox.addEventListener('change', function (e) {
+      let html = document.getElementsByTagName('html')[0];
+      if (checkbox.checked) {
+        html.setAttribute('data-theme', 'dark');
+      } else {
+        html.setAttribute('data-theme', 'light');
+      }
+    })
+  </script>
 </body>
+
 </html>
