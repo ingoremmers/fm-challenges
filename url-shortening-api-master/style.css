@@ -1,0 +1,315 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;  
+}
+body {
+    background: linear-gradient(white 44em, #eff1f7 44em, #eff1f7 100%);
+}
+
+main {
+    max-width: 1140px;
+    margin: auto;
+    
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 12.2em;
+    margin: 2em 0;
+}
+
+header a {
+    color: hsl(257, 7%, 63%);
+    font-weight: 700;
+    font-size: 0.83em;
+
+
+}
+header li:first-child {
+    padding-right: 1.5em;
+}
+header li {
+    padding: 0.9em 0.9em;
+    float: left;
+    font-size: 1em;
+}
+
+#login {
+    padding-left: 5px;
+
+}
+
+#login li:last-child  {
+    padding-right: 0;
+}
+
+
+#tagline{
+
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin: 3.5em 0.8em 1.9em 0.8em;
+}
+
+
+#tagline article {
+    margin: 3.6em 0;
+}
+
+
+#tagline h1 {
+    font-size: 4.35em;
+    line-height: 1.15em;
+    letter-spacing: -0.015em;
+    font-weight: 700;
+    color:hsl(260, 8%, 14%);
+}
+
+#tagline p {
+    width: 25em;
+    font-size: 1.2em;
+    line-height: 1.65em;
+    letter-spacing: 0.015em;
+    color: hsl(0, 0%, 75%)
+    
+}
+
+#tagline a {
+    display: inline-block;
+    margin: 1.8em 0;
+    font-weight: 700;
+    padding: 0.7em 2.1em;
+    font-size: 1.1em;
+}
+
+
+
+.centered {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+.green-button {
+    background-color: hsl(180, 66%, 49%);
+    color: white;
+    border-radius: 3em;
+    padding: 0.65em 1.6em;
+
+   
+    
+}
+form {
+    background-image: url(images/bg-shorten-desktop.svg);
+    background-color: hsl(257, 27%, 26%);
+    
+    font-size: 1em;
+
+    margin: 0em 0.8em;
+    padding: 1.2em;
+    border-radius: 10px;
+    
+}
+
+.shorten-input {
+    border-radius: 7px;
+    border: none;
+    padding: 1.2rem;
+    
+    margin: 1.5em 3em;
+    margin-right: 1.1em;
+    
+    
+}
+input[type="text"] {
+    width: 72.5%;
+    font-size: 1em;
+    color: hsl(257, 7%, 63%);
+}
+
+
+#shorten-submit{
+    background-color: hsl(180, 66%, 49%);
+    color: white;
+    font-size: 1em;
+    font-weight: 700;
+    margin-left: 0;
+    padding: 1.2rem 2.6em;
+    border-radius: 7px;
+    
+}
+
+
+
+
+
+/* ab hier statistics section*/
+
+#statistic {
+    margin: auto;
+}
+
+
+#statistic h2 {
+    margin-top: 2em;
+    font-size: 2.1em;
+    color:hsl(260, 8%, 14%);
+}
+#statistic p {
+    color: hsl(0, 0%, 75%);
+    font-size: 1em;
+    padding: 0.8em;
+    line-height: 1.6em;
+    margin-bottom: 4em;
+}
+
+h3 {
+    padding: 0 1em;
+}
+
+#statistic article p {
+    padding: 1em;
+    font-size: 0.9em;
+}
+
+#statistic div {
+  
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 10em;
+}
+
+#statistic article {
+    background-color: white;
+    border-radius: 5px;
+    width: 350px;
+    height: 280px;
+    float: left;
+    margin: auto;  
+    display: block;
+}
+
+#brand::after {
+    content: '';
+    background-color: hsl(180, 66%, 49%);
+    display: block;
+    height: 7px;
+    width: 900px;
+    position: relative;
+    left: 40px;
+    z-index: -3;
+    top: -150px;
+}
+
+#record {
+    transform: translateY(40px);
+}
+#fully {
+    transform: translateY(80px);
+}
+
+#statistic article::before {
+    content: '';
+    height: 80px;
+    width: 80px;
+    display: block;
+    background-color: hsl(255, 11%, 22%);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 40px;
+    transform: translateY(-40px) translateX(25px); 
+}
+
+#brand::before {
+    background-image: url(images/icon-brand-recognition.svg);
+}
+#record::before {
+    background-image: url(images/icon-detailed-records.svg);
+
+}
+
+#fully::before {
+    background-image: url(images/icon-fully-customizable.svg);
+}
+
+
+
+#boost {
+    clear: both;
+    background-color: hsl(257, 27%, 26%);
+    background-image: url(images/bg-boost-desktop.svg);
+
+    background-size: cover;
+    text-align: center;
+    padding:1em 0 2em 0;
+}
+
+#boost h2{
+    padding: 1em;
+    color: white;
+}
+#boost a {
+   display: inline-block;
+  
+}
+
+
+footer {
+    background-color: hsl(260, 8%, 14%);
+}
+
+footer div {
+    color: hsl(257, 7%, 63%);
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    padding: 2.7em 0.9em;
+    font-size: 0.85em;
+    color: white;
+    margin-bottom: 0;
+    max-width: 1440px;
+    margin: auto;
+
+}
+footer nav {
+    padding: 0 1em;
+}
+
+
+footer a {
+    color: hsl(0, 0%, 75%);
+    font-size: 0.9em;
+}
+
+footer a:hover {
+    color: hsl(180, 66%, 49%)
+}
+
+
+footer li {
+    margin-bottom: 0.6em;
+}
+footer li:first-child {
+    font-weight: 700;
+    margin-bottom: 1.4em;
+   
+}
+
+#social-media img {
+   padding-right: .5em;
+}
