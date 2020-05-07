@@ -16,6 +16,8 @@
   </style>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="style.css">
+
+  <script src="jquery-3.5.0.js"></script>
 </head>
 <body>
   <main>
@@ -54,10 +56,12 @@
 
   
 <section id="shorten">
-  <form action="" >
-    <input type="text" name="" required placeholder="Shorten a link here..." id="" class="shorten-input">
+  <form action="">
+    <input type="url" name="" required placeholder="Shorten a link here..." id="shorten-url" class="shorten-input">
     <input type="submit" value="Shorten It!" class="green-button shorten-input" id="shorten-submit">
   </form>
+
+
 </section>
 <section id="statistic">
   <h2 class="centered">Advanced Statistics</h2>
@@ -132,6 +136,79 @@
 </section>
 </div>
 </footer>
+
+<script>
+$(document).ready(function() {
+  let shorten_submit = $('#shorten-submit');
+  let shorten_url = $('#shorten-url');
+
+  //let service_link_url = "http://wolff.test/";
+   let service_link_url = "https://rel.ink/";
+
+  let urls;
+
+  if (localStorage.getItem('urls')) {
+    urls = JSON.parse(localStorage.getItem('urls'));
+
+    
+    for (let data of urls) {
+      let short_url = `${service_link_url + data.hashid}`;
+      $(`<p>
+            <a href="${data.url}">${data.url}</a> 
+            <span>
+              <a href="${short_url}">${short_url}</a>
+              <input type="submit" value="Copy" class="green-button copy" data-url="${short_url}" />
+            </span>
+            </p>`).appendTo('#shorten');
+    }
+  } else {
+    urls = [];
+  }
+
+  shorten_submit.click(function(e) {
+    let value = shorten_url.val();
+    
+   
+    let service_api_url = `${service_link_url}api/links/`;
+    
+    //let hash_url = $.post('https://rel.ink/api/links/', {"url": value}, function(data) {
+      let hash_url = $.post(service_api_url, {"url": value}, function(data) {
+      urls.push(data);
+      localStorage.setItem('urls', JSON.stringify(urls));
+      let short_url = `${service_link_url + data.hashid}`;
+      $(`<p>
+            <a href="${data.url}">${data.url}</a> 
+            <span>
+              <a href="${short_url}">${short_url}</a>
+              <input type="submit" value="Copy" class="copy green-button temp-copy" data-url="${short_url}"/>
+            </span>
+            </p>`).appendTo('#shorten');
+            $(".temp-copy").click(function (e) {
+                let url = e.target.dataset.url;
+                copyToClipbaord(url);
+            });
+    }, 'json');
+    e.preventDefault();
+  });
+  $(".copy").click(function (e) {
+    let url = e.target.dataset.url;
+    copyToClipbaord(url);
+  });
+
+});
+
+function copyToClipbaord(wert) {
+  let temp_text = document.createElement('textarea');
+  temp_text.value = wert;
+  document.body.appendChild(temp_text);
+  temp_text.select();
+  document.execCommand('copy');
+  document.body.removeChild(temp_text);
+
+}
+
+  
+</script>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
