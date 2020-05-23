@@ -168,6 +168,7 @@ $(document).ready(function() {
   shorten_submit.click(function(e) {
     let value = shorten_url.val();
     
+    if (!urls.find(x => x.url ===value)) {
    
     let service_api_url = `${service_link_url}api/links/`;
     
@@ -189,6 +190,7 @@ $(document).ready(function() {
             });
     }, 'json');
     e.preventDefault();
+  }
   });
   $(".copy").click(function (e) {
     let url = e.target.dataset.url;
