@@ -142,7 +142,6 @@ form {
 #shorten p {
   background-color: white;
   padding: 1.2rem;
-
   margin: 1.5em 0.8em;
   border-radius: 7px;
 }
@@ -349,7 +348,7 @@ footer li:first-child {
   }
 
   #tagline p {
-    width: auto;
+    width: 100%;
     font-size: 1em;
   }
   #tagline h1 {
